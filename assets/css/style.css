@@ -1,0 +1,5 @@
+.hover-glow .nav-link{transition: 0.2s ease-out}
+.hover-glow .nav-link:hover{
+    background-color: #1a61ff;
+    color: white;
+}
