@@ -4,36 +4,38 @@
             <div class="modal-body border-0 my-5">
                 <div class="container">
                     <div class="row">
-                        <div class="card card-body border-0 bg-transparent p-0 m-0">
-                            <h4 class="text-warning text-center mb-5">Login Account</h4>
+                        <?php if(empty($_SESSION['id'])) {?>
+                        <div class="card card-header border-0 bg-transparent p-0 m-0">
+                            <h4 class="text-warning text-center mb-5">Sign in</h4>
                             <p class="mx-auto text-center text-white w-75 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus facilis laborum, modi molestiae mollitia natus porro quis rerum voluptates. Aliquid!</p>
-                            <div class="card card-body bg-transparent border-0">
-                                <div class="row mb-3 mx-3">
-                                    <input type="text" placeholder="Username" class="input-focus form-control-lg border-warning rounded-0 mt-2" maxlength="30">
-                                </div>
-                                <div class="row mb-3 mx-3">
-                                    <input type="password" placeholder="Password" class="input-focus form-control-lg border-warning rounded-0 mt-2" maxlength="15">
-                                </div>
-                                <div class="row my-3 mx-2">
-                                    <div class="col m-0 p-0 ms-2">
-                                        <label class="text-white float-start"><input type="checkbox" name="rememberMe"> Keep me signed in </label>
+                            <div class="card-body bg-transparent border-0">
+                                <form action="action.php" method="post" class="">
+                                    <div class="row mb-3 mx-3">
+                                        <input  type="email" name="email" placeholder="Email Address" class="input-focus form-control-lg border-warning rounded-0 mt-2" maxlength="30">
                                     </div>
-                                    <div class="col">
-                                        <a href="" class="text-warning text-decoration-none float-end">Forgot password?</a>
+                                    <div class="row mb-3 mx-3">
+                                        <input type="password" name="password" placeholder="Password" class="input-focus form-control-lg border-warning rounded-0 mt-2" maxlength="15">
                                     </div>
-                                </div>
 
-                                <div class="row mt-3 mx-2">
-                                    <button type="submit" class="shadow btn btn-outline-warning border-3 rounded-5 w-50 mx-auto py-2 fs-5 fw-bolder text-uppercase">login</button>
-                                </div>
-                                <div class="row my-3 mx-2">
-                                    <div class="col text-center my-2 grow-3">
-                                        <a href="" class="text-warning text-decoration-none ">Already a member?</a>
+                                    <div class="row mt-5 mx-2">
+                                        <input type="submit" class="shadow btn btn-outline-warning border-3 rounded-5 w-50 mx-auto py-2 fs-5 fw-bolder text-uppercase" name="login_btn" value="login">
                                     </div>
-                                </div>
+                                </form>
+
                             </div>
 
                         </div>
+                        <?php }?>
+                        <?php if(isset($_SESSION['id'])) {?>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h1 class=""><?php echo $_SESSION['name'];?></h1>
+                                    <h3 class=""><?php echo $_SESSION['email'];?></h3>
+                                    <p class=""><?php echo $_SESSION['description'];?></p>
+                                </div>
+                            </div>
+                            <a href="action.php?page=logout" class="btn btn-outline-warning mt-3">Logout</a>
+                        <?php }?>
                     </div>
                 </div>
             </div>

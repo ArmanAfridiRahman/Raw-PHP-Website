@@ -19,4 +19,14 @@ class Home
     {
         return view('home', ['menus' => $this->menus, 'categories' => $this->categories]);
     }
+
+    public function about(){
+        return view('about', ['menus' => $this->menus, 'categories' => $this->categories]);
+    }
+    public function logout()
+    {
+        session_start();
+        unset($_SESSION['id']);
+        header('Location: action.php?page=home');
+    }
 }

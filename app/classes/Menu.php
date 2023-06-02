@@ -8,32 +8,19 @@ class Menu
     public function __construct()
     {
         $this->menus = [
+
+
             0 => [
-                'id' => 1,
-                'name' => 'home',
-                'dropdown' => false,
-            ],
-            1 => [
-                'id' => 2,
-                'name' => 'about',
-                'dropdown' => false,
-            ],
-            2 => [
-                'id' => 3,
-                'name' => 'contact',
-                'dropdown' => false,
-            ],
-            3 => [
                 'id' => 4,
                 'name' => 'Celestial Bodies',
                 'dropdown' => true,
             ],
-            4 => [
+            1 => [
                 'id' => 5,
                 'name' => 'Nasa',
                 'dropdown' => false,
             ],
-            5 => [
+            2 => [
                 'id' => 6,
                 'name' => 'SpaceX',
                 'dropdown' => false,
