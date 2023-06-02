@@ -24,22 +24,26 @@
                     </button>
                     <div class="collapse navbar-collapse my-4 my-lg-0" id="menu">
                         <ul class="nav navbar-nav ms-auto hover-glow">
-                            <li class=""><a href="" class="rounded-3 px-3 nav-link text-uppercase" data-bs-toggle="tab">home</a></li>
-                            <li class=""><a href="" class="rounded-3 px-3 nav-link text-uppercase" data-bs-toggle="tab">about</a></li>
-                            <li class=""><a href="" class="rounded-3 px-3 nav-link text-uppercase" data-bs-toggle="tab  ">contact</a></li>
-                            <li class="dropdown dropdown-hover">
-                                <a href="" class="dropdown-toggle nav-link text-uppercase rounded-3 px-3 ">Celestial Bodies</a>
-                                <ul class="dropdown-menu dropdown-menu-dark py-2 w-50 ms-2 ms-lg-0 ">
-                                    <li class="mx-2 mx-lg-0"><a href="" class="dropdown-item rounded-3 grow-2 w-90 ms-2 px-3">Galaxy</a></li>
-                                    <li class="mx-2 mx-lg-0"><a href="" class="dropdown-item rounded-3 grow-2 w-90 ms-2 px-3">Solar System</a></li>
-                                    <li class="mx-2 mx-lg-0"><a href="" class="dropdown-item rounded-3 grow-2 w-90 ms-2 px-3">Sun</a></li>
-                                    <li class="mx-2 mx-lg-0"><a href="" class="dropdown-item rounded-3 grow-2 w-90 ms-2 px-3">Moon</a></li>
-                                    <li class="mx-2 mx-lg-0"><a href="" class="dropdown-item rounded-3 grow-2 w-90 ms-2 px-3">Comet</a></li>
-                                    <li class="mx-2 mx-lg-0"><a href="" class="dropdown-item rounded-3 grow-2 w-90 ms-2 px-3">Planets</a></li>
-                                </ul>
-                            </li>
-                            <li class=""><a href="" class="nav-link text-uppercase rounded-3 px-3 ">Nasa</a></li>
-                            <li class=""><a href="" class="nav-link text-uppercase rounded-3 px-3 ">SpaceX</a></li>
+                            <?php foreach ($menus as $menu) {?>
+
+                                <?php if($menu['dropdown']) {?>
+                                    <li class="dropdown dropdown-hover">
+                                        <a href="action.php?page=<?php echo $menu['name'];?>&id=<?php echo $menu['id'];?>" class="dropdown-toggle nav-link text-uppercase rounded-3 px-3 "><?php echo $menu['name'];?></a>
+                                        <ul class="dropdown-menu dropdown-menu-dark py-2 w-50 ms-2 ms-lg-0 ">
+                                            <?php foreach ($categories as $category) {?>
+                                                    <?php if($menu['id'] == $category['menu_id']) {?>
+                                                        <li class="mx-2 mx-lg-0"><a href="action.php?page=<?php echo $category['name'];?>" class="dropdown-item rounded-3 grow-2 w-90 ms-2 px-3"><?php echo $category['name'];?></a></li>
+                                                    <?php }?>
+                                            <?php }?>
+                                        </ul>
+                                    </li>
+                                <?php } else{?>
+                                    <li class="">
+                                        <a href="action.php?page=<?php echo $menu['name'];?>&id=<?php echo $menu['id'];?>" class="rounded-3 px-3 nav-link text-uppercase" data-bs-toggle="tab"><?php echo $menu['name'];?></a></li>
+                               <?php }?>
+
+                            <?php }?>
+
                         </ul>
                         <ul class="navbar-nav ms-lg-5 mt-4 mt-lg-0">
                             <li class=""><a href="#profileModal" data-bs-toggle="modal" class="nav-link text-uppercase text-bg-warning rounded-3 px-3 grow-3">Profile</a></li>

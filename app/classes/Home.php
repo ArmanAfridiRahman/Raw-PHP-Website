@@ -1,10 +1,22 @@
 <?php
-
 namespace App\classes;
+use App\classes\Category;
+use App\classes\Menu;
 
 class Home
 {
-    public function index(){
-        return view('home');
+    public $menu, $menus = [], $category, $categories = [];
+
+    public function __construct()
+    {
+        $this->category = new Category();
+        $this->categories = $this->category->getAllCategory();
+        $this->menu = new Menu();
+        $this->menus = $this->menu->getAllMenu();
+    }
+
+    public function index()
+    {
+        return view('home', ['menus' => $this->menus, 'categories' => $this->categories]);
     }
 }
