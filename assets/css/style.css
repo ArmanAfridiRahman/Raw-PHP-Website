@@ -1,5 +1,26 @@
-.hover-glow .nav-link{transition: 0.2s ease-out}
-.hover-glow .nav-link:hover{
-    background-color: #1a61ff;
-    color: white;
+.dropdown-hover:hover .dropdown-menu{
+    display:block;
+}
+
+.theme-bg{background-color: #1a61ff;}
+.theme-border{border-color: #1a61ff; }
+.text-bg{color: #1a61ff;}
+.hover-glow .nav-link{transition: 0.2s ease-out;}
+.hover-glow .nav-link:hover{background-color: #1a61ff;}
+.hover-glow .dropdown-item:hover{
+    background-color: RGBA(255, 193, 7, var(--bs-bg-opacity, 1));
+    font-weight: normal;
+    color: black !important;
+}
+
+.grow-1{transition: 0.2s ease-out;}
+.grow-1:hover{transform: scale(1.01);}
+.grow-2{transition: 0.2s ease-out;}
+.grow-2:hover{transform: scale(1.02);}
+.grow-3{transition: 0.2s ease-out;}
+.grow-3:hover{transform: scale(1.03);}
+.w-90 {width: 90% !important;}
+
+.input-focus:focus{
+    outline: none;
 }
