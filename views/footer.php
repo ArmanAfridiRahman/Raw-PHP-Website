@@ -39,10 +39,10 @@
                         <div class="row">
                             <div class="card bg-dark border-0">
                                 <div class="card-body">
-                                    <img src="<?php echo $_SESSION['image'];?>" alt="" class="w-100">
-                                    <h1 class=""><?php echo $_SESSION['name'];?></h1>
-                                    <h3 class=""><?php echo $_SESSION['email'];?></h3>
-                                    <p class=""><?php echo $_SESSION['description'];?></p>
+                                    <img src="<?php echo $_SESSION['image'];?>" alt="" class="w-100 mb-4">
+                                    <h1 class="text-center text-white"><?php echo $_SESSION['name'];?></h1>
+                                    <h3 class="text-center text-white"><?php echo $_SESSION['email'];?></h3>
+                                    <p class="text-center text-white"><?php echo $_SESSION['description'];?></p>
                                 </div>
                                 <div class="card-footer mx-auto">
                                     <a href="action.php?page=logout" class="btn btn-outline-warning mt-3">Logout</a>

@@ -17,7 +17,7 @@ class Category
             1 => [
                 'id' => 2,
                 'menu_id' => 4,
-                'name' => 'solar-system',
+                'name' => 'star-system',
             ],
             2 => [
                 'id' => 3,

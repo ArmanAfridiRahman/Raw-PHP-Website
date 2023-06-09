@@ -16,7 +16,7 @@
         <section class="">
             <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
                 <div class="container px-5 py-2 px-lg-2">
-                    <a href="" class="navbar-brand">
+                    <a href="https://www.google.com/search?q=interstellar+brand&oq=interstellar+brand&aqs=chrome..69i57j0i512l9.4028j0j7&sourceid=chrome&ie=UTF-8" class="navbar-brand">
                         <i class="fa fa-2x text-bg-warning"> Bran</i>
                         <i class="fa fa-2x fa-space-shuttle"></i>
                     </a>

@@ -5,13 +5,25 @@ use App\classes\Menu;
 use App\classes\Entity;
 use App\classes\Nasa;
 use App\classes\Spacex;
+use App\classes\HomeContent;
+use App\classes\NasaAccordian;
+use App\classes\HomeCarousel;
+use App\classes\SpacexAccordian;
 
 class Home
 {
-    public $menu, $menus = [], $category, $categories = [], $entity, $entities =[], $singleNews, $singleEntity, $nasa, $nasaInfo = [], $nasaNews = [], $spacex, $spacexInfo = [], $spacexNews = [];
+    public $homeCarousel, $homeCarousels= [], $homeContents = [], $nasaAccordians = [], $nasaAccordian, $spacexAccordian, $spacexAccordians = [], $homeContent, $menu, $menus = [], $category, $categories = [], $entity, $entities =[], $singleNews, $singleEntity, $nasa, $nasaInfo = [], $nasaNews = [], $spacex, $spacexInfo = [], $spacexNews = [];
 
     public function __construct()
     {
+        $this->spacexAccordian = new SpacexAccordian();
+        $this->spacexAccordians = $this->spacexAccordian->getSpacexAccoridan();
+        $this->homeCarousel = new HomeCarousel();
+        $this->homeCarousels = $this->homeCarousel->getAllCarousel();
+        $this->homeContent = new HomeContent();
+        $this->homeContents = $this->homeContent->getAllHomeContent();
+        $this->nasaAccordian = new NasaAccordian();
+        $this->nasaAccordians = $this->nasaAccordian->getNasaAccoridan();
         $this->nasa = new Nasa();
         $this->nasaInfo = $this->nasa->getNasa();
         $this->nasaNews = $this->nasa->getLatestNews();
@@ -29,7 +41,8 @@ class Home
 
     public function index()
     {
-        return view('home', ['menus' => $this->menus, 'categories' => $this->categories]);
+
+        return view('home', ['menus' => $this->menus, 'categories' => $this->categories, 'homeContents' => $this->homeContents, 'nasa' => $this->nasaAccordians, 'spacex' => $this->spacexAccordians, 'carousels' => $this->homeCarousels]);
     }
     public function categoryEntity($id){
         $this->entities = $this->entity->getAllCategoryEntity($id);
