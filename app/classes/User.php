@@ -3,7 +3,7 @@ namespace App\classes;
 
 class User
 {
-    public $users = [], $email, $password, $incorrect;
+    public $users = [], $email, $password, $message;
 
     public function __construct($post = null)
     {
@@ -16,14 +16,16 @@ class User
                 'name' => 'Arman Afridi',
                 'email' => 'armanafridi@gmail.com',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, dicta distinctio in inventore ipsum magnam porro quisquam rem sequi ullam.',
-                'password' => 'adsfafsa558__@'
+                'password' => 'adsfafsa558__@',
+                'image' => 'assets/img/arman-afridi.png'
             ],
             1 => [
                 'id' => 2,
                 'name' => 'Admin',
                 'email' => 'admin@admin.com',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, dicta distinctio in inventore ipsum magnam porro quisquam rem sequi ullam.',
-                'password' => '111111'
+                'password' => '111111',
+                'image' => 'assets/img/profile/no-profile.png'
             ],
         ];
     }
@@ -39,11 +41,10 @@ class User
                 $_SESSION['name'] = $user['name'];
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['description'] = $user['description'];
+                $_SESSION['image'] = $user['image'];
                 header("Location: action.php?page=home");
             }
         }
-        echo 'Email or password is incorrect';
-        exit();
-
+        header("Location: action.php?page=home");
     }
 }

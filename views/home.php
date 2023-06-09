@@ -174,9 +174,24 @@
     <section id="contact" class="py-5 bg-warning">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-4">
+                    <h4 class="text-start">This Website is being developed by <br/><span class="fw-bold">Arman Afridi Rahman</span></h4>
+                </div>
+                <div class="col-4 text-center">
+                    <a href="https://www.linkedin.com/in/arman-afridi-rahman/" class="text-decoration-none"><i class="text-black fa-brands fa-2x fa-linkedin"> | </i></a>
+                    <a href="https://github.com/ArmanAfridiRahman" class="text-decoration-none"><i class="text-black fa-brands fa-2x fa-square-github"> | </i></a>
+                    <a href="https://twitter.com/ArmanAfridiR" class="text-decoration-none"><i class="text-black fa-brands fa-2x fa-square-twitter"> | </i></a>
+                    <a href="https://www.linkedin.com/in/arman-afridi-rahman/" class="text-decoration-none"><i class="text-black fa-brands fa-2x fa-square-facebook"></i></a>
+
+
+
 
                 </div>
+                <div class="col-4">
+                    <p class="text-black">This is a demonstration of my php knowledge. Overtime I look forward to improve it. I hope you enjoyed your stay in this website. Thank you for your time and attention.</p>
+                </div>
+
+
             </div>
         </div>
     </section>

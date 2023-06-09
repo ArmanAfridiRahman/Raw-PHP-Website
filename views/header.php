@@ -27,8 +27,8 @@
                         <ul class="nav navbar-nav ms-auto hover-glow">
 
                             <a href="action.php?page=home" class="rounded-3 px-3 nav-link text-uppercase" >home</a></li>
-                            <a href="#about" class="rounded-3 px-3 nav-link text-uppercase" >about</a></li>
-                            <a href="#contact" class="rounded-3 px-3 nav-link text-uppercase" >contact</a></li>
+                            <a href="action.php?page=home#about" class="rounded-3 px-3 nav-link text-uppercase" >about</a></li>
+                            <a href="action.php?page=home#contact" class="rounded-3 px-3 nav-link text-uppercase" >contact</a></li>
 
 
                             <?php if(isset($_SESSION['id'])) {?>
@@ -37,18 +37,18 @@
 
                                     <?php if($menu['dropdown']) {?>
                                         <li class="dropdown dropdown-hover">
-                                            <a href="action.php?page=<?php echo $menu['name'];?>&id=<?php echo $menu['id'];?>" class="dropdown-toggle nav-link text-uppercase rounded-3 px-3 "><?php echo $menu['name'];?></a>
+                                            <a href="" class="dropdown-toggle nav-link text-uppercase rounded-3 px-3 "><?php echo $menu['name'];?></a>
                                             <ul class="dropdown-menu dropdown-menu-dark py-2 w-50 ms-2 ms-lg-0 ">
                                                 <?php foreach ($categories as $category) {?>
                                                     <?php if($menu['id'] == $category['menu_id']) {?>
-                                                        <li class="mx-2 mx-lg-0"><a href="action.php?page=<?php echo $category['name'];?>" class="dropdown-item rounded-3 grow-2 w-90 ms-2 px-3"><?php echo $category['name'];?></a></li>
+                                                        <li class="mx-2 mx-lg-0"><a href="action.php?page=category&id=<?php echo $category['id'];?>" class="dropdown-item rounded-3 grow-2 w-90 ms-2 px-3 text-capitalize"><?php echo $category['name'];?></a></li>
                                                     <?php }?>
                                                 <?php }?>
                                             </ul>
                                         </li>
                                     <?php } else{?>
                                         <li class="">
-                                            <a href="action.php?page=<?php echo $menu['name'];?>&id=<?php echo $menu['id'];?>" class="rounded-3 px-3 nav-link text-uppercase" data-bs-toggle="tab"><?php echo $menu['name'];?></a></li>
+                                            <a href="action.php?page=<?php echo $menu['name'];?>" class="rounded-3 px-3 nav-link text-uppercase"><?php echo $menu['name'];?></a></li>
                                    <?php }?>
                                 <?php }?>
                             <?php }?>

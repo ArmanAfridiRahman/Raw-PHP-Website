@@ -12,32 +12,32 @@ class Category
             0 => [
                 'id' => 1,
                 'menu_id' => 4,
-                'name' => 'Galaxy',
+                'name' => 'galaxy',
             ],
             1 => [
                 'id' => 2,
                 'menu_id' => 4,
-                'name' => 'Solar System',
+                'name' => 'solar-system',
             ],
             2 => [
                 'id' => 3,
                 'menu_id' => 4,
-                'name' => 'Stars',
+                'name' => 'stars',
             ],
             3 => [
                 'id' => 4,
                 'menu_id' => 4,
-                'name' => 'Moon',
+                'name' => 'moon',
             ],
             4 => [
                 'id' => 5,
                 'menu_id' => 4,
-                'name' => 'Comet',
+                'name' => 'comet',
             ],
             5 => [
                 'id' => 6,
                 'menu_id' => 4,
-                'name' => 'Planets',
+                'name' => 'planets',
             ],
 
 

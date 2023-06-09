@@ -1,3 +1,4 @@
+
 <div class="modal fade bg-dark bg-opacity-25" id="profileModal">
     <?php if(empty($_SESSION['id'])) {?>
     <div class="modal-dialog modal-md p-4 ">
@@ -38,7 +39,7 @@
                         <div class="row">
                             <div class="card bg-dark border-0">
                                 <div class="card-body">
-                                    <img src="assets/img/profile/no-profile.png" alt="" class="">
+                                    <img src="<?php echo $_SESSION['image'];?>" alt="" class="w-100">
                                     <h1 class=""><?php echo $_SESSION['name'];?></h1>
                                     <h3 class=""><?php echo $_SESSION['email'];?></h3>
                                     <p class=""><?php echo $_SESSION['description'];?></p>
@@ -53,7 +54,6 @@
                 </div>
             </div>
         </div>
-
     <?php }?>
 </div>
 

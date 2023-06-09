@@ -12,17 +12,17 @@ class Menu
 
             0 => [
                 'id' => 4,
-                'name' => 'Celestial Bodies',
+                'name' => 'celestial bodies',
                 'dropdown' => true,
             ],
             1 => [
                 'id' => 5,
-                'name' => 'Nasa',
+                'name' => 'nasa',
                 'dropdown' => false,
             ],
             2 => [
                 'id' => 6,
-                'name' => 'SpaceX',
+                'name' => 'spacex',
                 'dropdown' => false,
             ],
         ];
