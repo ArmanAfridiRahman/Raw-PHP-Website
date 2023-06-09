@@ -37,7 +37,7 @@
 
                                     <?php if($menu['dropdown']) {?>
                                         <li class="dropdown dropdown-hover">
-                                            <a href="" class="dropdown-toggle nav-link text-uppercase rounded-3 px-3 "><?php echo $menu['name'];?></a>
+                                            <a class="dropdown-toggle nav-link text-uppercase rounded-3 px-3 "><?php echo $menu['name'];?></a>
                                             <ul class="dropdown-menu dropdown-menu-dark py-2 w-50 ms-2 ms-lg-0 ">
                                                 <?php foreach ($categories as $category) {?>
                                                     <?php if($menu['id'] == $category['menu_id']) {?>

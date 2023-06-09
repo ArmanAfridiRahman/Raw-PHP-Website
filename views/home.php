@@ -32,7 +32,7 @@
 
     <section id="about" class="py-5 bg-black">
         <h1 class="text-warning text-center mb-5">About</h1>
-        <p class="text-center text-white px-5 mx-5 mb-4">
+        <p class="text-center text-white px-5 mb-4">
             <?php echo $homeContent['about_pera'];?>
         </p>
         

@@ -11,6 +11,7 @@ class HomeContent
         $this->contents = [
             0 => [
                 'id' => 1,
+
                 'video' => 'assets/videos/animation.mp4',
                 'video_head' => 'To the mind that is still, <br/>the whole universe surrenders.',
                 'video_head_span' => "- Lao Tzu",
