@@ -18,7 +18,7 @@ class Menu
             1 => [
                 'id' => 5,
                 'name' => 'Nasa',
-                'dropdown' => true,
+                'dropdown' => false,
             ],
             2 => [
                 'id' => 6,

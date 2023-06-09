@@ -5,6 +5,8 @@
 .theme-bg{background-color: #1a61ff;}
 .theme-border{border-color: #1a61ff; }
 .text-bg{color: #1a61ff;}
+.text-bg-video-one{color: #ED915C;}
+.text-bg-video-two{color: #7BC5E6;}
 .hover-glow .nav-link{transition: 0.2s ease-out;}
 .hover-glow .nav-link:hover{background-color: #1a61ff;}
 .hover-glow .dropdown-item:hover{
@@ -23,10 +25,4 @@
 
 .input-focus:focus{
     outline: none;
-}
-.cropped-ofp {
-    width: 150px;
-    height: 550px;
-    object-fit: cover;
-    object-position: 25% 25%;
 }
