@@ -26,9 +26,9 @@
                     <div class="collapse navbar-collapse my-4 my-lg-0" id="menu">
                         <ul class="nav navbar-nav ms-auto hover-glow">
 
-                            <a href="action.php?page=home&id=1" class="rounded-3 px-3 nav-link text-uppercase" data-bs-toggle="tab">home</a></li>
-                            <a href="action.php?page=about&id=2" class="rounded-3 px-3 nav-link text-uppercase" data-bs-toggle="tab">about</a></li>
-                            <a href="action.php?page=contact&id=3" class="rounded-3 px-3 nav-link text-uppercase" data-bs-toggle="tab">contact</a></li>
+                            <a href="action.php?page=home" class="rounded-3 px-3 nav-link text-uppercase" >home</a></li>
+                            <a href="#about" class="rounded-3 px-3 nav-link text-uppercase" >about</a></li>
+                            <a href="#contact" class="rounded-3 px-3 nav-link text-uppercase" >contact</a></li>
 
 
                             <?php if(isset($_SESSION['id'])) {?>
@@ -40,9 +40,9 @@
                                             <a href="action.php?page=<?php echo $menu['name'];?>&id=<?php echo $menu['id'];?>" class="dropdown-toggle nav-link text-uppercase rounded-3 px-3 "><?php echo $menu['name'];?></a>
                                             <ul class="dropdown-menu dropdown-menu-dark py-2 w-50 ms-2 ms-lg-0 ">
                                                 <?php foreach ($categories as $category) {?>
-                                                        <?php if($menu['id'] == $category['menu_id']) {?>
-                                                            <li class="mx-2 mx-lg-0"><a href="action.php?page=<?php echo $category['name'];?>" class="dropdown-item rounded-3 grow-2 w-90 ms-2 px-3"><?php echo $category['name'];?></a></li>
-                                                        <?php }?>
+                                                    <?php if($menu['id'] == $category['menu_id']) {?>
+                                                        <li class="mx-2 mx-lg-0"><a href="action.php?page=<?php echo $category['name'];?>" class="dropdown-item rounded-3 grow-2 w-90 ms-2 px-3"><?php echo $category['name'];?></a></li>
+                                                    <?php }?>
                                                 <?php }?>
                                             </ul>
                                         </li>

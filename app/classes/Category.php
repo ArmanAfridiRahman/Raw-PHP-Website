@@ -40,6 +40,7 @@ class Category
                 'name' => 'Planets',
             ],
 
+
         ];
     }
     public function getAllCategory(){

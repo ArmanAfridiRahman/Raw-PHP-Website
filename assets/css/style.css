@@ -24,3 +24,9 @@
 .input-focus:focus{
     outline: none;
 }
+.cropped-ofp {
+    width: 150px;
+    height: 550px;
+    object-fit: cover;
+    object-position: 25% 25%;
+}
